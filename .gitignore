@@ -1,5 +1,6 @@
 # Virtual environment
 venv/
+tatboardenv/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
