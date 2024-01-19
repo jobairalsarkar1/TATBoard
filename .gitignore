@@ -1,0 +1,38 @@
+# Virtual environment
+venv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# The compiled bytecode of your app, created by Flask during runtime
+__pycache__/
+
+# Local development settings
+instance/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Environment variables file (if used)
+.env
+
+# IDE/Editor specific files
+.vscode/
+.idea/
+
+# Log files
+*.log
+
+# Compiled Python files
+*.pyc
+
+# Dependency directories
+lib/
+bin/
+
+# Image Files.
+static/*.jpeg
