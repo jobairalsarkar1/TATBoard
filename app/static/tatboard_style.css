@@ -1,0 +1,335 @@
+:root {
+  --navigation-background-color: #000000;
+  --tatboard-text-color: #ffffff;
+  --tatboard-btn-color: #20e11c;
+}
+
+* {
+  margin: 0;
+  /* padding: 0; */
+}
+
+/* Top Navitation Bar */
+.tatboard-nav {
+  padding: 1em 2.5em 1em 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--tatboard-text-color);
+  background-color: var(--navigation-background-color);
+}
+
+.tatboard-logo-div {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.tatboard-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.tatboard-logo-div span {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.tatboard-nav-list {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  list-style-type: none;
+}
+
+.tatboard-nav-list-item-link {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 550;
+  text-decoration: none;
+  color: var(--tatboard-text-color);
+}
+
+.tatboard-sign-in-btn {
+  margin-left: 0.8em;
+  padding: 0.8em 1.5em 0.8em 1.5em;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.5em;
+  color: var(--navigation-background-color);
+  background-color: var(--tatboard-text-color);
+  transition: all 0.3s;
+}
+
+.tatboard-sign-in-btn:hover {
+  box-shadow: 0 2px 2px 2px rgb(172, 172, 172);
+  transform: translateY(-3px);
+}
+
+/* .tatboard-nav-list-item-link:hover {
+  border-bottom: 3px solid #ffffff;
+} */
+
+.tatboard-nav-list-item-link:focus {
+  border-bottom: 3px solid #ffffff;
+}
+
+/* Main Body */
+.tatboard-main-body {
+  /* position: relative; */
+  height: calc(100vh - 87px);
+  /* Later to be Removed. */
+  /* background-color: var(--tatboard-btn-color);  */
+}
+
+.tatboard-main-customers-div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--tatboard-text-color); /* Later to be Removed. */
+}
+
+/* Login Form */
+.tatboard-login-form {
+  padding: 2em 1.2em 2.5em 1.2em;
+  width: 350px;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 0.8rem;
+  color: var(--tatboard-text-color);
+  background-color: var(--navigation-background-color);
+}
+
+.tatboard-login-form h1 {
+  margin: 0 0 0.3em 0;
+}
+
+.tatboard-login-form .tatboard-login-input {
+  padding: 1em 1.5em 1em 1.5em;
+  border-radius: 0.8rem;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+.tatboard-login-form-btn {
+  margin-top: 0.5em;
+  padding: 0.6em;
+  font-size: 20px;
+  font-weight: 600;
+  font-weight: 650;
+  border-radius: 0.6rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.tatboard-login-form-btn:hover {
+  transform: translateY(-2px);
+  color: var(--navigation-background-color);
+  background-color: aliceblue;
+  box-shadow: 0 0 2px 2px rgb(172, 172, 172);
+}
+
+.tatboard-main-addcustomer-div {
+  height: 100%;
+  background-color: var(--tatboard-text-color);
+}
+
+.tatboard-customer-action-option {
+  padding: 1em 2.5em 0.5em 2.5em;
+  display: flex;
+  gap: 1.5em;
+}
+
+.tatboard-addcustomer-action {
+  padding: 0.2em 1.5em 0.2em 1em;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  border: 3px solid var(--navigation-background-color);
+  background-color: var(--tatboard-text-color);
+}
+
+.tatboard-addcustomer-action-search {
+  width: 55%;
+}
+
+.tatboard-addcustomer-action-filter {
+  width: 15%;
+}
+
+.tatboard-addcustomer-btn {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 550;
+  border-radius: 15px;
+  text-decoration: none;
+  color: var(--navigation-background-color);
+  background-color: var(--tatboard-btn-color);
+}
+
+.tatboard-addcustomer-btn:hover {
+  background-color: #35e832;
+  box-shadow: 0 0 2px 2px #35e832;
+}
+
+.tatboard-addcustomer-input {
+  padding: 0.5em 0 0.5em 0.5em;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 550;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+/* Add Customer Form */
+.tatboard-addcustomer-form {
+  padding: 1.5em 2.5em 1em 2.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  /* background-color: orange; */
+}
+
+.tatboard-addcustomer-form label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tatboard-addcustomer-info-div {
+  /* While Making it Phone Responsive All I have to do is Remove this. */
+  display: flex;
+  gap: 1.5em;
+}
+
+.addcustomer-customer-info-field-div {
+  display: flex;
+  gap: 0.3em;
+  flex-direction: column;
+}
+
+.addcustomer-form-fname {
+  width: 50%;
+}
+
+.addcustomer-form-fname-input {
+  height: 25px;
+}
+
+.addcustomer-form-lname {
+  width: 50%;
+}
+
+.addcustomer-form-lname-input {
+  height: 25px;
+}
+
+.addcustomer-form-phone {
+  width: 30%;
+}
+
+.addcustomer-form-email {
+  width: 50%;
+}
+
+.addcustomer-form-gender {
+  width: 20%;
+}
+
+.addcustomer-form-product-input {
+  height: 60px;
+}
+
+/* .addcustomer-form-product {
+  min-height: 40px;
+  max-height: 100px;
+  max-width: 100%;
+  min-width: 95%;
+}
+
+.addcustomer-form-product-input {
+  min-height: 40px;
+  max-height: 100px;
+  max-width: 100%;
+  min-width: 95%;
+} */
+
+.addcustomer-form-address {
+  width: 75%;
+}
+
+.addcustomer-form-address-input {
+  height: 45px;
+}
+
+.addcustomer-form-total {
+  width: 25%;
+}
+
+.addcustomer-form-total-input {
+  height: 45px;
+}
+
+.addcustomer-form-input {
+  padding: 1em 1em 1em 1em;
+  font-size: 15px;
+  font-weight: 550;
+  border-radius: 15px;
+  outline: none;
+  border: 3px solid black;
+}
+
+.addcustomer-form-add-btn {
+  margin-top: 1em;
+  padding: 1em;
+  font-size: 20px;
+  font-weight: 550;
+  border-radius: 14px;
+  border: none;
+  background-color: var(--tatboard-btn-color);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.addcustomer-form-add-btn:hover {
+  transform: translateY(-5px);
+  background-color: rgb(101, 227, 101);
+}
+
+/* Customer List Table. */
+.tatboard-customer-table {
+  padding: 0.5em 2.5em 0.5em 2.5em;
+}
+
+.tatboard-customer-list-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tatboard-customer-list-table thead {
+  background-color: #d9d9d9;
+}
+
+.tatboard-customer-list-table thead th,
+td {
+  border: 2px solid black;
+  padding: 0.5em;
+}
+
+.tatboard-customer-list-table tbody td a {
+  color: #4574ee;
+  font-weight: 550;
+}

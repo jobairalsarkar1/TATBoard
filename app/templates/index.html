@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/tatboard_style.css">
+    <title>TATBoard</title>
+</head>
+
+<body>
+    <nav class="tatboard-nav">
+        <div class="tatboard-logo-div">
+            <img src="/static/tamim.jpeg" alt="Loading.." class="tatboard-logo">
+            <span>
+                TATBoard
+            </span>
+        </div>
+        <ul class="tatboard-nav-list">
+            <li class="tatboard-nav-list-item">
+                <a href="{{url_for('customers')}}" class="tatboard-nav-list-item-link">
+                    Customers
+                </a>
+            </li>
+            <li class="tatboard-nav-list-item">
+                <a href="{{url_for('add_customer')}}" class="tatboard-nav-list-item-link">
+                    Add Customer
+                </a>
+            </li>
+            <a href="{{ url_for('home') }}" class="tatboard-sign-in-btn">Sign In</a>
+        </ul>
+    </nav>
+    <main class="tatboard-main-body">
+        <div class="tatboard-main-customers-div">
+            <form action="#" class="tatboard-login-form">
+                <h1>TATBoard</h1>
+                <input type="email" placeholder="Enter Email" class="tatboard-login-input">
+                <input type="password" placeholder="Enter Password" class="tatboard-login-input">
+                <button type="submit" class="tatboard-login-form-btn">Sign In</button>
+            </form>
+        </div>
+    </main>
+    <script src="/static/tatboard_style.js"></script>
+</body>
+
+</html>
