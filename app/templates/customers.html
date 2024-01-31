@@ -68,6 +68,16 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {% for customer in customers %}
+                        <tr>
+                            <td scope="customer-id"><a href="#">2A10C5</a></td>
+                            <td>{{customer.name}}</td>
+                            <td>{{customer.phone}}</td>
+                            <td>{{customer.address}}</td>
+                            <td>Chegg, ChatGPT-4</td>
+                            <td>{{customer.amount}}</td>
+                        </tr>
+                        {% endfor %}
                         <tr>
                             <td scope="customer-id"><a href="#">2A10C5</a></td>
                             <td>Alice Walton</td>

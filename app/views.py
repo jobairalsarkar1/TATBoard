@@ -1,5 +1,6 @@
 from app import app
 from flask import render_template
+from .models import User, Customer
 
 
 @app.route('/')
@@ -9,7 +10,8 @@ def home():
 
 @app.route('/customers')
 def customers():
-    return render_template('customers.html')
+    customers = Customer.query.all()
+    return render_template('customers.html', customers=customers)
 
 
 @app.route('/add_customers')
