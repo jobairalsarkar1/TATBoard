@@ -11,7 +11,7 @@ class User(db.Model):
     password = db.Column(db.String(12), nullable=False)
     status = db.Column(db.String(40), default='admin')
     profile_picture = db.Column(
-        db.String(400), default='profile_pictures/default.jpg')
+        db.String(400), default='/profile_pictures/default.jpeg')
 
     def __init__(self, name, email, password) -> None:
         self.name = name

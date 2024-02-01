@@ -26,13 +26,23 @@ def logout():
     return redirect(url_for('home'))
 
 
-@app.route('/customers')
+@app.route('/customers', methods=['GET', 'POST'])
 def customers():
     if 'logged_in' not in session:
         flash('You must be logged in')
         return redirect(url_for('home'))
     valid = session['logged_in']
     logged_user = User.query.get(session['user_id'])
+    if request.method == 'POST':
+        search_query = request.form.get('search_query')
+        customers = Customer.query.filter(
+            (Customer.name.ilike(f'%{search_query}%')) |
+            (Customer.email.ilike(f'%{search_query}%')) |
+            (Customer.phone.ilike(f'%{search_query}%')) |
+            (Customer.address.ilike(f'%{search_query}%'))
+        ).all()
+        print(customers)
+        return render_template('customers.html', customers=customers, user=logged_user, valid=valid)
     customers = Customer.query.all()
     return render_template('customers.html', customers=customers, user=logged_user, valid=valid)
 
@@ -46,7 +56,7 @@ def add_customer():
         name = request.form.get('first-name')
         phone = request.form.get('phone')
         address = request.form.get('delivery-address')
-        print(address)
+        # print(address)
         amount = request.form.get('total')
         user_id = session['user_id']
         new_customer = Customer(name=name, phone=phone,
@@ -55,4 +65,5 @@ def add_customer():
         db.session.commit()
         flash('Customer Information added successfully.')
     valid = session['logged_in']
-    return render_template('add_customers.html', valid=valid)
+    logged_user = User.query.get(session['user_id'])
+    return render_template('add_customers.html', valid=valid, user=logged_user)
