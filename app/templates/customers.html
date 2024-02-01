@@ -11,7 +11,7 @@
 <body>
     <nav class="tatboard-nav">
         <div class="tatboard-logo-div">
-            <img src="/static/tamim.jpeg" alt="Loading.." class="tatboard-logo">
+            <img src="{{user.profile_picture}}" alt="Loading.." class="tatboard-logo">
             <span>
                 TATBoard
             </span>
@@ -27,7 +27,11 @@
                     Add Customer
                 </a>
             </li>
+            {% if valid %}
+            <a href="{{ url_for('logout') }}" class="tatboard-sign-in-btn">Sign Out</a>
+            {% else %}
             <a href="{{ url_for('home') }}" class="tatboard-sign-in-btn">Sign In</a>
+            {% endif %}
         </ul>
     </nav>
     <main class="tatboard-main-body">
@@ -47,7 +51,7 @@
                     </svg>
                     <input type="text" placeholder="Filter" class="tatboard-addcustomer-input">
                 </div>
-                <a href="/templates/add_customers.html" class="tatboard-addcustomer-btn">
+                <a href="{{url_for('add_customer')}}" class="tatboard-addcustomer-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 448 512">
                         <path
                             d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />

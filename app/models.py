@@ -28,8 +28,7 @@ class User(db.Model):
 class Customer(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
-    email = db.Column(db.String(50), unique=True,
-                      default='notusable@gmail.com')
+    email = db.Column(db.String(50), default='notusable@gmail.com')
     phone = db.Column(db.String(15), nullable=False)
     address = db.Column(db.String(300), nullable=False)
     amount = db.Column(db.Float(), nullable=False)
