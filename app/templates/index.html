@@ -32,10 +32,12 @@
     </nav>
     <main class="tatboard-main-body">
         <div class="tatboard-main-customers-div">
-            <form action="#" class="tatboard-login-form">
+            <form method="POST" action="{{url_for('home')}}" class="tatboard-login-form">
                 <h1>TATBoard</h1>
-                <input type="email" placeholder="Enter Email" class="tatboard-login-input">
-                <input type="password" placeholder="Enter Password" class="tatboard-login-input">
+                <input type="email" name="email" placeholder="Enter Email" id="email" class="email tatboard-login-input"
+                    required>
+                <input type="password" name="password" placeholder="Enter Password" id="password"
+                    class="password tatboard-login-input" required>
                 <button type="submit" class="tatboard-login-form-btn">Sign In</button>
             </form>
         </div>
