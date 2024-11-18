@@ -1,5 +1,5 @@
 from app import app, db
-from flask import render_template, request, redirect, url_for, session, flash
+from flask import render_template, request, redirect, url_for, session, flash, abort
 from .models import User, Customer
 
 
@@ -67,3 +67,30 @@ def add_customer():
     valid = session['logged_in']
     logged_user = User.query.get(session['user_id'])
     return render_template('add_customers.html', valid=valid, user=logged_user)
+
+
+@app.route('/customers/<int:customer_id>', methods=['GET', 'POST'])
+def customer_detail(customer_id):
+    if 'logged_in' not in session:
+        flash('You must be Logged in.')
+        return redirect(url_for('home'))
+    customer = Customer.query.get_or_404(customer_id)
+    valid = session['logged_in']
+    logged_user = User.query.get(session['user_id'])
+    return render_template('customer_detail.html', customer=customer, valid=valid, user=logged_user)
+
+
+# @app.route('/customer/<int:customer_id>/delete', methods=['POST'])
+# def delete_customer(customer_id):
+#     if 'logged_in' not in session:
+#         flash('You must be logged in')
+#         return redirect(url_for('home'))
+
+#     if not session.get('is_admin'):
+#         abort(403)  # Forbidden
+
+#     customer = Customer.query.get_or_404(customer_id)
+#     db.session.delete(customer)
+#     db.session.commit()
+#     flash('Customer deleted successfully.')
+#     return redirect(url_for('customers'))

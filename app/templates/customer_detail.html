@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/tatboard_style.css">
+    <title>Customer List</title>
+</head>
+
+<body>
+    <nav class="tatboard-nav">
+        <div class="tatboard-logo-div">
+            <img src="{{url_for('static', filename=user.profile_picture)}}" alt="Loading.." class="tatboard-logo">
+            <span>
+                TATBoard
+            </span>
+        </div>
+        <ul class="tatboard-nav-list">
+            <li class="tatboard-nav-list-item">
+                <a href="{{ url_for('customers') }}" class="tatboard-nav-list-item-link">
+                    Customers
+                </a>
+            </li>
+            <li class="tatboard-nav-list-item">
+                <a href="{{ url_for('add_customer') }}" class="tatboard-nav-list-item-link">
+                    Add Customer
+                </a>
+            </li>
+            {% if valid %}
+            <a href="{{ url_for('logout') }}" class="tatboard-sign-in-btn">Sign Out</a>
+            {% else %}
+            <a href="{{ url_for('home') }}" class="tatboard-sign-in-btn">Sign In</a>
+            {% endif %}
+        </ul>
+    </nav>
+    <main class="tatboard-main-body">
+        <div class="customer-details">
+            <h1>Customer Details.</h1>
+            <h2>Name: {{customer.name}}</h2>
+            <p>Email: {{customer.email}}</p>
+            <p>Contact: {{customer.phone}}</p>
+        </div>
+    </main>
+    <script src="/static/tatboard_style.js"></script>
+</body>
+
+</html>
