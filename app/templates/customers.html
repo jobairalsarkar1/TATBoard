@@ -89,7 +89,10 @@
                     <tbody>
                         {% for customer in customers %}
                         <tr>
-                            <td scope="customer-id"><a href="#">2A10C5</a></td>
+                            <!-- <td scope="customer-id"><a href="#">2A10C5</a></td> -->
+                            <td scope="customer-id"><a
+                                    href="{{url_for('customer_detail', customer_id=customer.id)}}">{{customer.id}}</a>
+                            </td>
                             <td>{{customer.name}}</td>
                             <td>{{customer.phone}}</td>
                             <td>{{customer.address}}</td>
@@ -107,7 +110,6 @@
                         </tr> -->
                     </tbody>
                 </table>
-                <h1>{{user.name}}</h1>
             </div>
         </div>
     </main>

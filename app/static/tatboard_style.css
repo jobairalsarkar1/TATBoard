@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 :root {
   --navigation-background-color: #000000;
   --tatboard-text-color: #ffffff;
@@ -6,7 +8,11 @@
 
 * {
   margin: 0;
-  /* padding: 0; */
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  /* color-scheme: dark; */
 }
 
 /* Top Navitation Bar */
@@ -54,8 +60,8 @@
 
 .tatboard-sign-in-btn {
   margin-left: 0.8em;
-  padding: 0.8em 1.5em 0.8em 1.5em;
-  font-size: 20px;
+  padding: 0.4rem 1rem 0.4rem 1rem;
+  font-size: 18px;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
@@ -97,7 +103,7 @@
 
 /* Login Form */
 .tatboard-login-form {
-  padding: 2em 1.2em 2.5em 1.2em;
+  padding: 2em 1.2em 2em 1.2em;
   width: 350px;
   display: flex;
   gap: 1em;
@@ -113,7 +119,7 @@
 }
 
 .tatboard-login-form .tatboard-login-input {
-  padding: 1em 1.5em 1em 1.5em;
+  padding: 0.8em 1.5em 0.8em 1.5em;
   border-radius: 0.8rem;
   border: none;
   outline: none;
@@ -122,7 +128,7 @@
 
 .tatboard-login-form-btn {
   margin-top: 0.5em;
-  padding: 0.6em;
+  padding: 0.4em;
   font-size: 20px;
   font-weight: 600;
   font-weight: 650;
@@ -145,13 +151,13 @@
 }
 
 .tatboard-customer-action-option {
-  padding: 1em 2.5em 0.5em 2.5em;
+  padding: 1rem 2.5rem 1rem 2.5rem;
   display: flex;
   gap: 1.5em;
 }
 
 .tatboard-addcustomer-action {
-  padding: 0.2em 1.5em 0.2em 1em;
+  padding: 0.2rem 0.6rem 0.2rem 0.6rem;
   display: flex;
   align-items: center;
   border-radius: 15px;
@@ -164,7 +170,7 @@
 }
 
 .tatboard-addcustomer-action-filter {
-  width: 15%;
+  width: 25%;
 }
 
 .tatboard-addcustomer-btn {
@@ -200,7 +206,7 @@
   padding: 1.5em 2.5em 1em 2.5em;
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 0.5rem;
   /* background-color: orange; */
 }
 
@@ -293,9 +299,9 @@
 }
 
 .addcustomer-form-add-btn {
-  margin-top: 1em;
-  padding: 1em;
-  font-size: 20px;
+  margin-top: 0.5rem;
+  padding: 0.6rem 0.8rem;
+  font-size: 18px;
   font-weight: 550;
   border-radius: 14px;
   border: none;
@@ -332,4 +338,60 @@ td {
 .tatboard-customer-list-table tbody td a {
   color: #4574ee;
   font-weight: 550;
+}
+
+@media (max-width: 700px) {
+  .tatboard-logo-div {
+    gap: 0.5em;
+  }
+
+  .tatboard-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .tatboard-logo-div span {
+    font-size: 20px;
+  }
+
+  .tatboard-nav-list {
+    gap: 0.5em;
+  }
+
+  .tatboard-nav-list-item-link {
+    font-size: 15px;
+  }
+
+  .tatboard-sign-in-btn {
+    margin-left: 0.5em;
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 550px) {
+  .tatboard-logo {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+
+  .tatboard-logo-div span {
+    font-size: 18px;
+  }
+
+  .tatboard-nav-list {
+    gap: 0.5em;
+  }
+
+  .tatboard-nav-list-item-link {
+    font-size: 12px;
+  }
+
+  .tatboard-sign-in-btn {
+    margin-left: 0.3em;
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+    font-size: 15px;
+  }
 }
